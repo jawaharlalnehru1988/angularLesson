@@ -7,13 +7,11 @@ import { InputTextModule } from 'primeng/inputtext';
 import { SidebarModule } from 'primeng/sidebar';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { ToolbarModule } from 'primeng/toolbar';
-import { EmulatedComponent } from './app.emulated';
-import { ShadowdomComponent } from './shadowdom.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [ToolbarModule, ButtonModule, SplitButtonModule, InputTextModule, IconFieldModule, InputIconModule, SidebarModule, EmulatedComponent, ShadowdomComponent],
+  imports: [ToolbarModule, ButtonModule, SplitButtonModule, InputTextModule, IconFieldModule, InputIconModule, SidebarModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   encapsulation: ViewEncapsulation.Emulated
