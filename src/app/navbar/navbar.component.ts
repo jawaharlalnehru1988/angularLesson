@@ -14,7 +14,6 @@ import { ToolbarModule } from 'primeng/toolbar';
   imports: [ToolbarModule, ButtonModule, SplitButtonModule, InputTextModule, IconFieldModule, InputIconModule, SidebarModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
-  encapsulation: ViewEncapsulation.Emulated
 })
 export class NavbarComponent {
   items: MenuItem[] | undefined;
