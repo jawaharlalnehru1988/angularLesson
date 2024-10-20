@@ -1,3 +1,7 @@
 <app-navbar />
 <app-footer />
 
+<h1>Fruits Name and Price</h1>
+@for(fruit of fruitsData; track fruit.id){
+    <p>{{fruit.name}} - {{fruit.price}} Rs</p>
+}
