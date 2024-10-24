@@ -1,0 +1,18 @@
+<h1>Event Binding</h1>
+
+<button (dblclick)="onClick('i am clicked two times')">Click</button>
+
+<input type="text" (keyup.control.enter)="onKeyup($event)">
+<hr>
+<input type="date" name="" (change)="onDateSelect()" id="">
+<hr>
+<input type="text" (focus)="onFocus()">
+<input type="text" (blur)="onBlur()">
+<hr>
+<input type="text" #myInput placeholder="template ref variable">
+
+<button (click)="myInput.focus()">template ref</button>
+<hr>
+@for(fruit of fruitsData; track fruit.id){
+    <button (click)="buttonClick(fruit.name)">{{fruit.name}}</button>
+}

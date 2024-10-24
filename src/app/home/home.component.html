@@ -1,9 +1,12 @@
 <app-navbar />
-<!-- <app-footer /> -->
+<app-footer />
+@if(fruitsData){
 
-@for(fruit of fruitsData; track fruit.id){
-    <p [attr.role]="fruit.name" title="{{fruit.name}}">{{fruit.name}}</p>
-    <img [src]="fruit.image" alt="">
-    <p>{{fruit.price}}</p>
+    @for(fruit of fruitsData; track fruit.id){
+        <p [attr.role]="fruit.name" title="{{fruit.name}}">{{fruit.name}}</p>
+        <img [src]="fruit.image" alt="">
+        <p>{{fruit.price}}</p>
+    }
 }
 
+  

@@ -13,6 +13,12 @@ import { CommonService } from '../common.service';
 })
 export class HomeComponent {
 fruitsData: any;
+initialCount = 18;
+selectedItem = 'Apple';  
+userRating = 3;
+
+
+items = ['Apple', 'Banana', 'Orange', 'Pear', 'Strawberry'];
 constructor(private commonService: CommonService){}
 
 ngOnInit(): void {
@@ -24,4 +30,6 @@ ngOnInit(): void {
   })
  
 }
+
+
 }
