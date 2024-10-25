@@ -1,0 +1,58 @@
+<div class="card flex justify-content-center">
+    <p>Text Input</p>
+    <input type="text" pInputText [(ngModel)]="value" (ngModelChange)="typeValue($event)" />
+</div>
+
+<p>Check box</p>
+<div class="card flex justify-content-center">
+    <p-checkbox 
+        [(ngModel)]="checked" 
+        [binary]="true" 
+        inputId="binary" />
+</div>
+<p>{{checked}}</p>
+
+
+<p>Radio button</p>
+<div class="flex flex-wrap gap-3">
+    <div class="flex align-items-center">
+        <p-radioButton 
+            name="pizza" 
+            value="Cheese" 
+            [(ngModel)]="ingredient" 
+            inputId="ingredient1" />
+        <label for="ingredient1" class="ml-2">
+            Cheese
+        </label>
+    </div>
+    
+    <div class="flex align-items-center">
+        <p-radioButton 
+            name="pizza" 
+            value="Mushroom" 
+            [(ngModel)]="ingredient" 
+            inputId="ingredient2" />
+        <label for="ingredient2" class="ml-2">
+            Mushroom
+        </label>
+    </div>
+</div>
+
+<p>Drop drop</p>
+<div class="card flex justify-content-center">
+    <p-dropdown 
+        [options]="cities" 
+        [(ngModel)]="selectedCity" 
+        optionLabel="name"
+        placeholder="Select a City" />
+</div>
+
+<p>{{selectedCity.name}}</p>
+
+<p>Calendar</p>
+<div class="card flex justify-content-center">
+    <p-calendar [(ngModel)]="date" [iconDisplay]="'input'" 
+    [showIcon]="true" placeholder="Pick a Date" dateFormat="dd-mm-yy" />
+</div>
+
+<p>{{date}}</p>
