@@ -23,5 +23,18 @@ get age(){
   return this.initialValue;
 }
 
+@Input({transform: (value:number)=> value*2}) weight!: number;
+@Input({transform: transformValue}) complexObj!: NameObj[];
 
+
+}
+
+function transformValue(value: NameObj[]): NameObj[] {
+
+  return value.map((item)=>{
+    return {
+      ...item,
+      value: item.value*2
+    }
+  })
 }

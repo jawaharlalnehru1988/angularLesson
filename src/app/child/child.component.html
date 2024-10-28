@@ -9,3 +9,11 @@
 <p>{{studentObj.name}}</p>
 
 <p>{{age}}</p>
+<hr>
+<p>{{weight}}</p>
+
+<hr>
+
+@for (item of complexObj; track item.id) {
+    <p>{{item.value}}</p>
+}
