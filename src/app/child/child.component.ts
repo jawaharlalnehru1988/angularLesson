@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NameObj } from '../common.model';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-child',
   standalone: true,
-  imports: [],
+  imports: [ButtonModule],
   templateUrl: './child.component.html',
   styleUrl: './child.component.scss'
 })
@@ -26,6 +27,11 @@ get age(){
 @Input({transform: (value:number)=> value*2}) weight!: number;
 @Input({transform: transformValue}) complexObj!: NameObj[];
 
+message:string[] = ["Hello", "World"];
+@Output("valueChild") valueFromChild = new EventEmitter<string[]>();
+sayHelloToParent(){
+  this.valueFromChild.emit(this.message);
+}
 
 }
 

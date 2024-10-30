@@ -1,10 +1,10 @@
-<div style="text-align: center;">
+<div style="text-align: center; border: 2px solid rgb(17, 6, 100);">
     <p>parent works!</p>
-
+    <p>{{dataFromChild}}</p>
 </div>
 
 
 <div style="text-align: center; border: 2px solid black;">
 
-    <app-child [value]="numValue" [student]="studentObj" [age]="50" [weight]="4" [complexObj]="numValue"></app-child>
+    <app-child (valueChild)="valueFromChild($event)" [value]="numValue" [student]="studentObj" [age]="50" [weight]="4" [complexObj]="numValue"></app-child>
 </div>

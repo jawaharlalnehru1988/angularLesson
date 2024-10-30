@@ -32,4 +32,11 @@ export class ParentComponent {
     name: 'four',
     value: 4
   };
+
+  dataFromChild!: string[]
+
+  valueFromChild(event:string[]) {
+    console.log(event);
+    this.dataFromChild = event;
+  }
 }
