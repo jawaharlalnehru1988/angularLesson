@@ -34,9 +34,16 @@ export class ParentComponent {
   };
 
   dataFromChild!: string[]
+  dataFromChildOutput!: string;
 
   valueFromChild(event:string[]) {
     console.log(event);
     this.dataFromChild = event;
+  }
+
+  dataFromChild2(event:string){
+  console.log('event :', event);
+  this.dataFromChildOutput = event;
+
   }
 }

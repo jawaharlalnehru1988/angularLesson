@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, output, Output } from '@angular/core';
 import { NameObj } from '../common.model';
 import { ButtonModule } from 'primeng/button';
 
@@ -31,6 +31,13 @@ message:string[] = ["Hello", "World"];
 @Output("valueChild") valueFromChild = new EventEmitter<string[]>();
 sayHelloToParent(){
   this.valueFromChild.emit(this.message);
+}
+
+sendDataToParent = output<string>({alias: "dataOutput"});
+
+dataFromchild(messageFromOupt: string){
+
+  this.sendDataToParent.emit(messageFromOupt);
 }
 
 }
