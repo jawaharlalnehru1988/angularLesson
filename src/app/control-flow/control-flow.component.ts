@@ -10,4 +10,12 @@ import { Component } from '@angular/core';
 export class ControlFlowComponent {
 controlVar = {}; 
 controlVar2 = [];
+
+dataObj = {
+    subData: {
+        subData2: {
+          firstName: 'hello'
+        }
+    }
+}
 }
