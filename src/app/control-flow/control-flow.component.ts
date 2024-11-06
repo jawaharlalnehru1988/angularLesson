@@ -18,4 +18,10 @@ dataObj = {
         }
     }
 }
+
+age: number = 16;
+employee:string = "guesjdsflsdjf";
+
+
+
 }

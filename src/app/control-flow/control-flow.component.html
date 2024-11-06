@@ -11,3 +11,32 @@
     <p>{{testValue}}</p>
 }
 
+<hr>
+
+@switch (true) {
+    @case (age < 18) {
+        <p>you are not eligible for vote</p>
+    }
+    @case (age >= 18) {
+        <p>you are  eligible for vote</p>
+    }
+    @default {
+        <p> are you eligible for vote?</p>
+    }
+}
+<hr>
+@switch (employee) {
+    @case('admin'){
+        <p>Admin is allowed to see the content</p>
+    }
+    @case ('user') {
+        <p>User is allowed to see the content</p>
+    }
+    @case ('guest') {
+        <p>Guest is not allowed to see the content</p>
+    }
+    @default {
+        <p>log in to see the content</p>
+    }
+}
+
