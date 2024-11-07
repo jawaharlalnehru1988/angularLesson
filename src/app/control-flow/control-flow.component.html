@@ -40,3 +40,21 @@
     }
 }
 
+<hr>
+<h1>For loop</h1>
+<hr>
+
+<!-- <p *ngFor="let fruit of fruitsDetails; trackBy: trackByFn">{{fruit.name}}</p> -->
+
+@for(fruit of fruitsDetails; track fruit.id; let count = $count;
+let index = $index; let first = $first; let last = $last; 
+let even = $even; let odd = $odd) {
+    <p>{{count}}. {{index}} - {{fruit.name}}, isItFirst: {{first}}, 
+        isIsLast: {{last}}, isItEven: {{even}}, isItOdd: {{odd}} </p>
+} @empty {
+    <p>No fruits</p>
+}
+
+
+<p-button (click)="addFruit()">addFruit</p-button>
+<p-button (click)="emptyFruit()">empty fruit</p-button>
