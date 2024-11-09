@@ -1,0 +1,21 @@
+<p>content-parent works!</p>
+<input type="text" #myInput (input)="0">
+<hr>
+<content-child>
+    <div>
+       This is the content from parent
+    </div>
+    <hr>
+    <div #valueFromParent>
+       {{myInput.value}}
+    </div>
+<hr>
+    <div header-card>
+        this is the header content from parent
+    </div>
+    <div body-card>
+        this is the body content from parent
+    </div>
+
+    this is default value
+</content-child>
