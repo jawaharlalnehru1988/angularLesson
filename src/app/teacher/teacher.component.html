@@ -1,0 +1,17 @@
+<p #teacherRef>teacher works!</p>
+<input type="text" #teacherInput placeholder="type here">
+<hr>
+<input type="checkbox" name="" #teacherCheckbox id="">
+
+@for(item of [1, 2, 3, 4, 5]; track item){
+    <button #teacherButton (click)="0"> button {{item}}</button>
+}
+
+<input type="text" pInputText #primeRef />
+<hr>
+
+<app-student></app-student>
+
+@for(stuItem of [1, 2, 3, 4, 5]; track stuItem){
+    <app-student [stuItem]="stuItem"></app-student>
+}
