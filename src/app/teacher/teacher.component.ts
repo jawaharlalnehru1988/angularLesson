@@ -40,7 +40,6 @@ this.teacherButtoncom!.forEach((item)=>{
   console.log(item.nativeElement.textContent);
 })
 
-this.studentcom?.sayGoodMorningToTeacher();
 // this.inputTextcom!.nativeElement.value = 'some value';
 console.log(this.inputTextcom?.nativeElement.value);
 
@@ -48,8 +47,17 @@ console.log(this.inputTextcom?.nativeElement.value);
 
 ngAfterViewChecked(){
   console.log("changes are detected");
-
+  
   console.log(this.inputTextcom?.nativeElement.value);
   
 }
+passValue(){
+  this.studentcom?.sayGoodMorningToTeacher(12);
+  this.studentcom?.studentName
+  console.log('this.studentcom?.studentName :', this.studentcom?.studentName);
+  console.log('this.studentcom?.changeValue; :', this.studentcom?.changeValue);
+
+}
+
+
 }

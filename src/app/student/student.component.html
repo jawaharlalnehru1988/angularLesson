@@ -1,3 +1,8 @@
 <p>student works!</p>
 
 <button (click)="0">student click {{stuItem}}</button>
+
+
+<p>{{intValue}}</p>
+
+<input type="text" [(ngModel)]="studentName" placeholder="type here" (ngModelChange)="studentVAlueChange($event)">
