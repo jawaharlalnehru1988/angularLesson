@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-student',
