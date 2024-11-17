@@ -1,0 +1,28 @@
+<p>datatable works!</p>
+
+
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">street</th>
+                <th scope="col">postcode</th>
+                <th scope="col">door number</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(user of addresses; track user.id){
+            <tr>
+
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.street}}</td> 
+                    <td>{{user.postcode}}</td>
+                    <td>{{user.door}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

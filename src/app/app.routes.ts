@@ -6,6 +6,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ControlFlowComponent } from './control-flow/control-flow.component';
 import { ContentParentComponent } from './content-parent/content-parent.component';
 import { TeacherComponent } from './teacher/teacher.component';
+import { DatatableComponent } from './datatable/datatable.component';
 
 export const routes: Routes = [
     { path: '',  component: HomeComponent},
@@ -14,5 +15,6 @@ export const routes: Routes = [
     {path: 'parent', component: ParentComponent},
     {path: 'control', component: ControlFlowComponent},
     {path: 'content', component: ContentParentComponent},
-    {path: 'teacher', component: TeacherComponent}
+    {path: 'teacher', component: TeacherComponent},
+    {path: 'datatable', component: DatatableComponent},
 ];
