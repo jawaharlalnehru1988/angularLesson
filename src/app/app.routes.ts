@@ -7,6 +7,7 @@ import { ControlFlowComponent } from './control-flow/control-flow.component';
 import { ContentParentComponent } from './content-parent/content-parent.component';
 import { TeacherComponent } from './teacher/teacher.component';
 import { DatatableComponent } from './datatable/datatable.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 export const routes: Routes = [
     { path: '',  component: HomeComponent},
@@ -17,4 +18,5 @@ export const routes: Routes = [
     {path: 'content', component: ContentParentComponent},
     {path: 'teacher', component: TeacherComponent},
     {path: 'datatable', component: DatatableComponent},
+    {path: 'reactive', component: ReactiveFormComponent},
 ];
