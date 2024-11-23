@@ -1,0 +1,60 @@
+/* Centering the form in the viewport */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Styling each form group */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 300px; /* Set width for consistent layout */
+  }
+  
+  /* Label styling */
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Error message styling */
+  .p-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  /* Add some padding and styling to inputs */
+  input[pInputText], 
+  textarea[pInputTextarea], 
+  p-inputNumber, 
+  p-checkbox {
+    width: 100%; /* Full width input */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  textarea[pInputTextarea] {
+    resize: vertical; /* Allow vertical resizing only */
+  }
+  
+  p-checkbox {
+    margin-top: 5px; /* Space above the checkbox */
+  }
+  
+  /* For better focus states */
+  input:focus, 
+  textarea:focus, 
+  p-inputNumber:focus-within {
+    border-color: #007ad9;
+    box-shadow: 0 0 5px rgba(0, 122, 217, 0.5);
+    outline: none;
+  }
+  

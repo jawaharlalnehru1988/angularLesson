@@ -8,6 +8,7 @@ import { ContentParentComponent } from './content-parent/content-parent.componen
 import { TeacherComponent } from './teacher/teacher.component';
 import { DatatableComponent } from './datatable/datatable.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { FormgroupComponent } from './formgroup/formgroup.component';
 
 export const routes: Routes = [
     { path: '',  component: HomeComponent},
@@ -19,4 +20,5 @@ export const routes: Routes = [
     {path: 'teacher', component: TeacherComponent},
     {path: 'datatable', component: DatatableComponent},
     {path: 'reactive', component: ReactiveFormComponent},
+    {path: 'formgroup', component: FormgroupComponent},
 ];

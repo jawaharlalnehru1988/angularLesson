@@ -1,0 +1,41 @@
+<div class="form-container">
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<p>formgroup works!</p>
+<div class="form-group">
+    <label for="username">Username</label>
+    <input formControlName="username"
+        pInputText 
+        id="username" 
+        aria-describedby="username-help" 
+        />
+</div>
+<div class="form-group">
+    <label for="textarea">Comment</label>
+    <textarea formControlName="comment"
+    rows="5"
+    cols="30"
+    pInputTextarea 
+    id="textarea"
+    >
+</textarea>
+</div>
+
+<div class="form-group">
+    <label for="integeronly">Phone Number</label>
+    <p-inputNumber inputId="integeronly" formControlName="phone" />
+</div>
+
+<div class="form-group">
+    <label for="terms">Terms</label>
+    <p-checkbox
+    [binary]="true" 
+    inputId="binary" formControlName="terms" />
+</div>
+
+<div class="form-group">
+    <button pButton type="submit" label="Submit"></button>
+</div>
+
+</form>
+</div>
