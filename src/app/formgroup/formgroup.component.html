@@ -1,41 +1,45 @@
+@let touched = registerForm.get('username')?.touched;
+@let userRegister = registerForm.get('username');
+@let errorMessage = getValidationError(userRegister);
+
+
 <div class="form-container">
 
-<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-<p>formgroup works!</p>
-<div class="form-group">
-    <label for="username">Username</label>
-    <input formControlName="username"
-        pInputText 
-        id="username" 
-        aria-describedby="username-help" 
-        />
-</div>
-<div class="form-group">
-    <label for="textarea">Comment</label>
-    <textarea formControlName="comment"
-    rows="5"
-    cols="30"
-    pInputTextarea 
-    id="textarea"
-    >
-</textarea>
-</div>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <p>Registration Form</p>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input formControlName="username" pInputText id="username" aria-describedby="username-help" />
+                @if(touched && errorMessage){
+                    <small class="p-error"> {{errorMessage}} </small>
+                }
+        </div>
+        <div class="form-group">
+            <label for="textarea">Comment</label>
+            <textarea formControlName="comment" rows="5" cols="30" maxlength="101" pInputTextarea id="textarea" #commentRef (input)="0"> </textarea>
+            <small>word count {{commentRef.value.length}}</small>
+            @if(registerForm.get('comment')?.hasError('maxlength')){
+            <small class="p-error"> Comment must be at most 100 characters long</small>
+            }
 
-<div class="form-group">
-    <label for="integeronly">Phone Number</label>
-    <p-inputNumber inputId="integeronly" formControlName="phone" />
-</div>
+        </div>
 
-<div class="form-group">
-    <label for="terms">Terms</label>
-    <p-checkbox
-    [binary]="true" 
-    inputId="binary" formControlName="terms" />
-</div>
+        <div class="form-group">
+            <label for="integeronly">Phone Number</label>
+            <p-inputNumber inputId="integeronly" formControlName="phone" mode="decimal" maxlength="10" [useGrouping]="false" />
+            @if( registerForm.get('phone')?.touched && registerForm.get('phone')?.hasError('pattern')){
+            <small class="p-error"> Phone number must be start with 6,7,8,9 and maximum 10 digits</small>
+            }
+        </div>
 
-<div class="form-group">
-    <button pButton type="submit" label="Submit"></button>
-</div>
+        <div class="form-group">
+            <label for="terms">Terms</label>
+            <p-checkbox [binary]="true" inputId="binary" formControlName="terms" label="I accept terms and conditions" />
+        </div>
 
-</form>
+        <div class="form-group">
+            <button pButton type="submit" label="Submit" [disabled]="!registerForm.valid"></button>
+        </div>
+
+    </form>
 </div>
