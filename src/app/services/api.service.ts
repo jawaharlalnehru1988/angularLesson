@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, signal } from '@angular/core';
 import { AddressData } from '../common.model';
+import { Comment } from '../common-modal/commen.model';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,20 @@ addHashtagwithDoorNo(arr: AddressData[]){
   }))
 }
 
+getAllComments(){
+  return this.http.get('http://localhost:8080/comment/all');
+}
 
+createComment(data: any){
+  return this.http.post('http://localhost:8080/comment/create', data);
+}
+
+updateComment(payload:Comment, id: number){
+return this.http.put(`http://localhost:8080/comment/update/${id}`, payload);
+}
+
+deleteComment(id: number){
+  return this.http.delete(`http://localhost:8080/comment/delete/${id}`);
+}
 
 }

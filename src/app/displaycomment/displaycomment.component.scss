@@ -1,0 +1,10 @@
+@import url('../formgroup/formgroup.component.scss');
+
+.form-container {
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    font-family: Arial, sans-serif;
+  }

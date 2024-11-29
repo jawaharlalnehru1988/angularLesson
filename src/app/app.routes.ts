@@ -9,6 +9,7 @@ import { TeacherComponent } from './teacher/teacher.component';
 import { DatatableComponent } from './datatable/datatable.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { FormgroupComponent } from './formgroup/formgroup.component';
+import { DisplaycommentComponent } from './displaycomment/displaycomment.component';
 
 export const routes: Routes = [
     { path: '',  component: HomeComponent},
@@ -21,4 +22,5 @@ export const routes: Routes = [
     {path: 'datatable', component: DatatableComponent},
     {path: 'reactive', component: ReactiveFormComponent},
     {path: 'formgroup', component: FormgroupComponent},
+    {path: 'comment', component: DisplaycommentComponent},
 ];

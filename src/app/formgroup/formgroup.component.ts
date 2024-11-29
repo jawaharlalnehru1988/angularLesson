@@ -5,12 +5,14 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ButtonModule } from 'primeng/button';
+import { ApiService } from '../services/api.service';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-formgroup',
   standalone: true,
-  imports: [ReactiveFormsModule, InputTextModule, InputTextareaModule,
+  imports: [ReactiveFormsModule, RouterLink, InputTextModule, InputTextareaModule,
      InputNumberModule, CheckboxModule, ButtonModule],
   templateUrl: './formgroup.component.html',
   styleUrl: './formgroup.component.scss'
@@ -18,7 +20,7 @@ import { ButtonModule } from 'primeng/button';
 export class FormgroupComponent {
   registerForm!: FormGroup;
 
-  constructor(private fb: FormBuilder){}
+  constructor(private fb: FormBuilder, private apiService: ApiService){}
 
   ngOnInit() {
     this.initializeForm();
@@ -43,7 +45,17 @@ export class FormgroupComponent {
     
     if (this.registerForm.valid) {
       console.log(this.registerForm.value);
-      
+      this.apiService.createComment(this.registerForm.value).subscribe({
+        next: (res) => {
+          console.log('data :', res);
+        },
+        error: (err) => {
+          console.log('error :', err);
+        },
+        complete: () => {
+          console.log('complete');
+        },
+      });
     }
 
   }
