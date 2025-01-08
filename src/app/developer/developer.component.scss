@@ -1,0 +1,27 @@
+$light-theme-bg: white;
+$light-theme-color: black;
+$light-theme-border: #ccc;
+
+$dark-theme-bg: black;
+$dark-theme-color: white;
+$dark-theme-border: #444;
+
+@mixin theme-styles($bg-color, $text-color, $border-color){
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 20px;
+    border: 1px solid $border-color;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Light{
+    @include theme-styles($light-theme-bg, $light-theme-color, $light-theme-border);
+}
+
+.Dark {
+    @include theme-styles($dark-theme-bg, $dark-theme-color, $dark-theme-border);
+}

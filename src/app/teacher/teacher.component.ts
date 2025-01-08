@@ -47,10 +47,9 @@ console.log(this.inputTextcom?.nativeElement.value);
 
 ngAfterViewChecked(){
   console.log("changes are detected");
-  
   console.log(this.inputTextcom?.nativeElement.value);
-  
 }
+
 passValue(){
   this.studentcom?.sayGoodMorningToTeacher(12);
   this.studentcom?.studentName

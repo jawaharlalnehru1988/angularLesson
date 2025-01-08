@@ -11,6 +11,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { FormgroupComponent } from './formgroup/formgroup.component';
 import { DisplaycommentComponent } from './displaycomment/displaycomment.component';
 import { NgrxComponent } from './ngrx/ngrx/ngrx.component';
+import { AdminComponent } from './admin/admin.component';
 
 export const routes: Routes = [
     { path: '',  component: HomeComponent},
@@ -24,5 +25,6 @@ export const routes: Routes = [
     {path: 'reactive', component: ReactiveFormComponent},
     {path: 'formgroup', component: FormgroupComponent},
     {path: 'comment', component: DisplaycommentComponent},
-    {path: 'ngrx', component: NgrxComponent}
+    {path: 'ngrx', component: NgrxComponent},
+    {path: 'admin', component: AdminComponent},
 ];
